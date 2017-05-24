@@ -5,11 +5,11 @@
                 <div class="card">
                     <div class="header">
                         <h4 class="title">Member List</h4>
+
                     </div>
                     <div class="content table-responsive table-full-width">
                         <table class="table table-striped">
                             <thead>
-                            <th>Member ID</th>
                             <th>Nick Name</th>
                             <th>Full name</th>
                             <th>Cell phone Number</th>
@@ -18,7 +18,6 @@
                             <tbody>
                                 <?php foreach($members as $member) { ?>
                                     <tr>
-                                        <td><?= $member->member_id ?></td>
                                         <td><?= $member->nick_name ?></td>
                                         <td><?= $member->full_name ?></td>
                                         <td><?= $member->phone_cell ?></td>

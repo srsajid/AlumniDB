@@ -17,11 +17,6 @@ class Member extends CI_Controller {
     public function index() {
         $config = array(
             array(
-                'field' => 'member_id',
-                'label' => 'Member ID',
-                'rules' => 'required|max_length[50]|is_unique[member.member_id]'
-            ),
-            array(
                 'field' => 'nick_name',
                 'label' => 'Nick Name',
                 'rules' => 'required|max_length[50]',
@@ -31,8 +26,18 @@ class Member extends CI_Controller {
             ),
             array(
                 'field' => 'full_name',
-                'label' => 'full_name',
+                'label' => 'Full Name',
                 'rules' => 'required|max_length[250]'
+            ),
+            array(
+                'field' => 'profession',
+                'label' => 'Profession',
+                'rules' => 'max_length[250]'
+            ),
+            array(
+                'field' => 'designation',
+                'label' => 'Designation',
+                'rules' => 'max_length[250]'
             ),
             array(
                 'field' => 'phone_cell',
@@ -65,22 +70,17 @@ class Member extends CI_Controller {
                 'rules' => 'required|max_length[500]'
             ),
             array(
-                'field' => 'year_honors',
+                'field' => 'batch_bsc',
                 'label' => 'Honers Year',
-                'rules' => 'numeric|max_length[4]'
+                'rules' => 'numeric|max_length[2]'
             ),
             array(
-                'field' => 'year_masters',
+                'field' => 'batch_msc',
                 'label' => 'Masters Year',
-                'rules' => 'numeric|max_length[4]'
+                'rules' => 'numeric|max_length[2]'
             ),
             array(
-                'field' => 'year_preliminary',
-                'label' => 'Preliminary Year',
-                'rules' => 'numeric|max_length[4]'
-            ),
-            array(
-                'field' => 'Work_address',
+                'field' => 'permanent_address',
                 'label' => 'Work Address',
                 'rules' => 'max_length[500]'
             ),
@@ -98,16 +98,6 @@ class Member extends CI_Controller {
                 'field' => 'blood_group',
                 'label' => 'Blood Group',
                 'rules' => 'max_length[5]'
-            ),
-            array(
-                'field' => 'marital_status',
-                'label' => 'Marital Status',
-                'rules' => 'max_length[15]'
-            ),
-            array(
-                'field' => 'spouse_name',
-                'label' => 'Spouse Name',
-                'rules' => 'max_length[250]'
             )
         );
         $this->load->library('form_validation');
