@@ -35,6 +35,21 @@ class Member extends CI_Controller {
                 'rules' => 'max_length[250]'
             ),
             array(
+                'field' => 'company_name',
+                'label' => 'Company Name',
+                'rules' => 'max_length[250]'
+            ),
+            array(
+                'field' => 'spouse_name',
+                'label' => 'Spouse Name',
+                'rules' => 'max_length[250]'
+            ),
+            array(
+                'field' => 'nid',
+                'label' => 'National ID',
+                'rules' => 'numeric|max_length[20]'
+            ),
+            array(
                 'field' => 'designation',
                 'label' => 'Designation',
                 'rules' => 'max_length[250]'

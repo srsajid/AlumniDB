@@ -9,6 +9,8 @@ class Member_Model extends CI_Model {
         $data = array(
             'member_id' => $this->input->post('member_id'),
             'nick_name' => $this->input->post('nick_name'),
+            'company_name' => $this->input->post('company_name'),
+            'gender' => $this->input->post('gender'),
             'profession' => $this->input->post('profession'),
             'designation' => $this->input->post('designation'),
             'full_name' => $this->input->post('full_name'),
